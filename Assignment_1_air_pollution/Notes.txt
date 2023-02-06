@@ -1,0 +1,9 @@
+Assignment 1:
+1. Write 3 functions
+2. dataset in specdata.zip
+3. Data in 332 CSV files
+4. Each file has a monitor ID number e.g. 200.csv
+5. Files contains three variables: Date(YYYY-MM-DD), sulfate and nitrate.
+6. Account for NA values.
+7. First function: pollutantmean<-function(directory,pollutant,id=1:332)
+8. Save your code to a file named pollutantmean.R.
