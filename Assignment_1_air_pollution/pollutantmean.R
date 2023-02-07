@@ -1,29 +1,30 @@
-pollutantmean<-function(directory,id){
+pollutantmean<-function(directory,pollutant,id=1:332){
   
 
   files<-list.files(directory,full.names=TRUE,pattern="*.csv")
   
-  i=0
   
   for(i in id){
     
     input<-files[i]
     
     data<-read.csv(input)
+    #options(max.print=100000) #avoids reached 'max' limit
+    
     #print(data)
     
-    View(data)
-    
   }
-  print(class(data))
+  #print(class(data))
   
     
   #Use df[!is.na(df$col_name),] to remove NA values
-  data<-data[!is.na(data$sulfate),]
+  data<-data[!is.na(data[[pollutant]]),]
   #print(data)
   #print(class(data))
-  print(data$sulfate)
-  print(mean(data$sulfate))
+  print(data[[pollutant]])
+
+  
+  print(mean(data[[pollutant]]))
   
   
       
